@@ -1,0 +1,118 @@
+/* FOOTER */
+.footer {
+  background-color: var(--bgc);
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 80px 10px 20px;
+  }
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--accent);
+    &-item {
+      flex: 1 1 255px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--accent);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    gap: 15px;
+  }
+  &__link-text {
+    font-size: 14px;
+    line-height: 1.5;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__text {
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  &__pay-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  &__pay-link {
+    transform: scale(1);
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__contacts {
+    &-links {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+  &__contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__social {
+    &-icons {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 23px;
+    }
+    &-icon {
+      transform: scale(1);
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 185px;
+    &-link {
+      font-size: 14px;
+      line-height: 1.5;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  &__figma {
+    font-weight: 600;
+    text-decoration-line: underline;
+  }
+}

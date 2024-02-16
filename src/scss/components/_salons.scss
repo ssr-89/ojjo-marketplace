@@ -1,0 +1,84 @@
+/* SALONS */
+.salons {
+  background-image: url("./img/dark-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 100px;
+    min-height: 541px;
+  }
+  &__title {
+    margin-bottom: 15px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  &__text {
+    margin-bottom: 45px;
+    font-family: var(--second-family);
+    font-size: 30px;
+    line-height: 41px;
+  }
+  &__descr {
+    margin-bottom: 60px;
+    max-width: 730px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  &__link {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 224px;
+    min-height: 51px;
+    background-color: var(--white);
+    transition: 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      background-color: var(--accent);
+      z-index: -1;
+      transition: 0.3s ease-in-out;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      transition: 0.3s ease-in-out;
+    }
+    &:focus {
+      background: transparent;
+      outline: 1px solid var(--white);
+      outline-offset: 1px;
+      .salons__link-text {
+        color: var(--white);
+      }
+    }
+    &:hover:not(:focus):not(:active) {
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+      .salons__link-text {
+        color: var(--white);
+      }
+    }
+  }
+}

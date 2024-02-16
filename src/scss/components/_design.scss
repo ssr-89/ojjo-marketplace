@@ -1,0 +1,120 @@
+/* DESIGN */
+.design {
+  background-color: var(--bgc);
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 120px 10px 60px;
+  }
+  &__title {
+    margin: 0 0 15px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  &__text {
+    margin: 0 0 60px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 60px;
+    width: 100%;
+  }
+  &__list {
+    --design-gap: 30px;
+    --design-elements: 3;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--design-gap);
+    width: 100%;
+  }
+  &__item {
+    width: calc((100% - (var(--design-elements) - 1) * var(--design-gap)) / (var(--design-elements)));
+    min-height: 370px;
+    &:nth-child(n + 4) {
+      display: none;
+    }
+    &.show-items:nth-child(n + 4) {
+      display: inline-block;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    transition: 0.3s ease-in-out;
+    &--1 {
+      background: center / cover no-repeat url(./img/design-1.png);
+    }
+    &--2 {
+      background: center / cover no-repeat url(./img/design-2.png);
+    }
+    &--3 {
+      background: center / cover no-repeat url(./img/design-3.png);
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  &__link-text {
+    font-size: 21px;
+    line-height: 1.4;
+    color: var(--white);
+    text-align: center;
+  }
+  &__btn {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+    min-height: 51px;
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--bgc);
+      z-index: -1;
+      transition: 0.3s ease-in-out;
+    }
+    &:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+    &:hover {
+      color: var(--accent);
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
